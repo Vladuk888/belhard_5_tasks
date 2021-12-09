@@ -7,6 +7,11 @@
 
 
 def not_3(array: list) -> list:
+    e_list = []
+    for i in array:
+        if i % 3 != 0:
+            e_list.append(i)
+    array = e_list
     return array
 
 
