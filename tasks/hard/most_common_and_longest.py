@@ -10,9 +10,12 @@
 
 
 def common_and_longest(text: str) -> tuple:
-    common = None
-    longest = None
-    return common, longest
+    import collections
+    common = collections.Counter(text.split())
+    longest = max(text.split(), key=len)
+    print(common)
+    print(longest)
+    return common.most_common(1), longest
 
 
 if __name__ == '__main__':
